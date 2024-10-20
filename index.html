@@ -32,7 +32,7 @@ cases.forEach(caseElement => {
 
     caseElement.addEventListener('click', () => {
         if (today >= dateCible) {
-            window.location.href = `01àvenir.html`; // Remplace par ton lien
+            window.location.href = `jour01.html`; // Remplace par ton lien
         } else {
             alert("Veuillez patienter jusqu'à ce jour !");
             window.location.href = 'page_attente.html';
@@ -55,14 +55,14 @@ cases.forEach(caseElement => {
 const cases = document.querySelectorAll('.case');
 
 cases.forEach(caseElement => {
-    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
-    const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
-    const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
+    const jour = parseInt(caseElement.getAttribute('data-jour'));
+    const mois = parseInt(caseElement.getAttribute('data-mois')) - 1; // Les mois commencent à 0
+    const annee = parseInt(caseElement.getAttribute('data-annee'));
     const dateCible = new Date(annee, mois, jour);
 
     caseElement.addEventListener('click', () => {
         if (today >= dateCible) {
-            window.location.href = 01àvenir.html`; // Remplace par ton lien
+            window.location.href = jour01.html`; // Remplace par ton lien
         } else {
             alert("Veuillez patienter jusqu'à ce jour !");
             window.location.href = 'patience.html';
