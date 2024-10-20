@@ -1,5 +1,5 @@
 body {
-  background: url("https://images.unsplash.com/photo-1517299321609-52687d1bc55a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") center center;
+  background: url("https://images.unsplash.com/photo-1671150590216-f138600130ce?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center center;
   background-size: cover;
   background-attachment: fixed
 }
@@ -43,9 +43,9 @@ body {
 
   .grid-1 {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "t     t     t     d2      d7      d8"
-                         "t     t     t     d4      d11     d12"
-                         "t     t     t     d19     d9      d13"
+    grid-template-areas: "d2      d7      d8    t     t     t "
+                         "d4      d11     d12    t     t     t "
+                         "d19     d9      d13    t     t     t "
                          "d6    d1    d24   d24     d21     d20"
                          "d17   d18   d24   d24     d5      d22"
                          "d3    d23   d16   d14     d10     d15";
@@ -243,7 +243,7 @@ label {
 
     /* typography */
     font-family: 'Gabriola', fantasy;
-    color: #fbb601;
+    color: #ffffff;
     font-size: 4em;
     font-weight: bold;
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
@@ -253,12 +253,12 @@ label {
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
-      background-color: #2e313d;
+      background-color: #ffffff;
       transform: rotateY(180deg);
   }
 
   label:hover .door {
-    border-color: #385052;
+    border-color: #ffffff;
   }
 
   :checked + .door {
@@ -271,7 +271,7 @@ footer {
   text-align: center;
 }
   footer a {
-      color: #2e313d;
+      color: #ffffff;
   }
     footer a:hover {
           text-decoration: none;
