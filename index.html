@@ -10,7 +10,7 @@
   <div class='title'>
     <img src='logo.png'>
   </div>
-  <div class="case" data-jour="02" data-mois="10" data-annee="2024">
+  <div class="case" data-jour="24" data-mois="10" data-annee="2024">
     <label>
         <div class='door'>
           <div class='front'>1</div>
@@ -38,18 +38,17 @@ cases.forEach(caseElement => {
     });
 });
     </script>
-  <div class="case" data-jour="12" data-mois="10" data-annee="2024">
+   <div class="case" data-jour="24" data-mois="10" data-annee="2024">
     <label>
         <div class='door'>
           <div class='front'>2</div>
           <div class='back'></div>
-
         </div>
       </input>
     </label>
-  </div> 
+  </div>
   <script>
-    const today = new Date();
+       const today = new Date();
 const cases = document.querySelectorAll('.case');
 
 cases.forEach(caseElement => {
@@ -60,13 +59,14 @@ cases.forEach(caseElement => {
 
     caseElement.addEventListener('click', () => {
         if (today >= dateCible) {
-            window.location.href = jour01.html`; // Remplace par ton lien
+            window.location.href = `jour01.html`; // Remplace par ton lien
         } else {
             window.location.href = 'patience.html';
         }
     });
 });
     </script>
+  
   <div class="case" data-jour="3">
     <label>
         <input type='button' onclick="window.location.href='patience.html';" value="3" >
