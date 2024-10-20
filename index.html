@@ -12,10 +12,11 @@
   </div>
   <div class='day-1'>
     <label>
-      <input type='='button' onclick="window.location.href='jour01.html';" value="1" >
+      <input type='='button' onclick="window.location.href='page1}.html';" value="1" >
         <div class='door'>
           <div class='front'>1</div>
           <div class='back'></div>
+          <div class="case" data-jour="1" data-mois="10" data-annee="2024">1</div>
         </div>
       </input>
     </label>
@@ -26,7 +27,7 @@
         <div class='door'>
           <div class='front'>2</div>
           <div class='back'></div>
-
+          <div class="case" data-jour="1" data-mois="10" data-annee="2024">1</div>
         </div>
       </input>
     </label>
@@ -256,5 +257,25 @@
     Envato Tuts+ 2017 ☃️
   </a>
 </footer>
+  <script>
+  const today = new Date();
+const cases = document.querySelectorAll('.case');
+
+cases.forEach(caseElement => {
+    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
+    const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
+    const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
+    const dateCible = new Date(annee, mois, jour);
+
+    caseElement.addEventListener('click', () => {
+        if (today >= dateCible) {
+            window.location.href = `page${jour}.html`; // Remplace par ton lien
+        } else {
+            alert("Veuillez patienter jusqu'à ce jour !");
+            window.location.href = 'page_attente.html';
+        }
+    });
+});
+    </script>
 </body>
 </html>
