@@ -22,25 +22,24 @@
     </label>
   </div>
   <script>
-        const today = new Date();
-        const currentDay = today.getDate(); // Récupère le jour du mois
-        const cases = document.querySelectorAll('.case');
+       const today = new Date();
+const cases = document.querySelectorAll('.case');
 
-        cases.forEach(caseElement => {
-             const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
+cases.forEach(caseElement => {
+    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
     const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
     const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
     const dateCible = new Date(annee, mois, jour);
 
-            caseElement.addEventListener('click', () => {
-                if (jour <= currentDay) {
-                    window.location.href = `01àvenir.html`; // Remplace par ton lien
-                } else {
-                
-                    window.location.href = 'patience.html';
-                }
-            });
-        });
+    caseElement.addEventListener('click', () => {
+        if (today >= dateCible) {
+            window.location.href = `page${jour}.html`; // Remplace par ton lien
+        } else {
+            alert("Veuillez patienter jusqu'à ce jour !");
+            window.location.href = 'page_attente.html';
+        }
+    });
+});
     </script>
   <div class="case" data-jour="02" data-mois="10" data-annee="2024">
     <label>
@@ -52,26 +51,26 @@
         </div>
       </input>
     </label>
-  </div> <script>
-        const today = new Date();
-        const currentDay = today.getDate(); // Récupère le jour du mois
-        const cases = document.querySelectorAll('.case');
+  </div> 
+  <script>
+    const today = new Date();
+const cases = document.querySelectorAll('.case');
 
-        cases.forEach(caseElement => {
-             const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
+cases.forEach(caseElement => {
+    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
     const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
     const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
     const dateCible = new Date(annee, mois, jour);
 
-            caseElement.addEventListener('click', () => {
-                if (jour <= currentDay) {
-                    window.location.href = `01àvenir.html`; // Remplace par ton lien
-                } else {
-                
-                    window.location.href = 'patience.html';
-                }
-            });
-        });
+    caseElement.addEventListener('click', () => {
+        if (today >= dateCible) {
+            window.location.href = `page${jour}.html`; // Remplace par ton lien
+        } else {
+            alert("Veuillez patienter jusqu'à ce jour !");
+            window.location.href = 'page_attente.html';
+        }
+    });
+});
     </script>
   <div class="case" data-jour="3">
     <label>
