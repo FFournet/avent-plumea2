@@ -2,7 +2,6 @@
 <html>
 <head>
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="neige.css">
   <title> Calendrier de l'Avent Pluméa </title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -55,9 +54,9 @@ cases.forEach(caseElement => {
 const cases = document.querySelectorAll('.case');
 
 cases.forEach(caseElement => {
-    const jour = parseInt(caseElement.getAttribute('data-jour'));
-    const mois = parseInt(caseElement.getAttribute('data-mois')) - 1; // Les mois commencent à 0
-    const annee = parseInt(caseElement.getAttribute('data-annee'));
+    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
+    const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
+    const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
     const dateCible = new Date(annee, mois, jour);
 
     caseElement.addEventListener('click', () => {
