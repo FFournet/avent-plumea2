@@ -73,13 +73,33 @@ cases.forEach(caseElement => {
   
   <div class="case" data-jour="3">
     <label>
+      <div class="case" data-jour="19" data-mois="10" data-annee="2024">
         <input type='button' onclick="window.location.href='patience.html';" value="3" >
         <div class='door'>
           <div class='front'>3</div>
           <div class='back'></div>
         </div>
       </input>
-    </label>
+    </label> 
+    <script>
+       const today = new Date();
+const cases = document.querySelectorAll('.case');
+
+cases.forEach(caseElement => {
+    const jour = parseInt(caseElement.getAttribute('data-jour'), 10);
+    const mois = parseInt(caseElement.getAttribute('data-mois'), 10) - 1; // Les mois commencent à 0
+    const annee = parseInt(caseElement.getAttribute('data-annee'), 10);
+    const dateCible = new Date(annee, mois, jour);
+
+    caseElement.addEventListener('click', () => {
+        if (today >= dateCible) {
+            window.location.href = `jour01.html`; // Remplace par ton lien
+        } else {
+            window.location.href = 'patience.html';
+        }
+    });
+});
+    </script>
   </div>
   <div class="case" data-jour="4">
     <label>
