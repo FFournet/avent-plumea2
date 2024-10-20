@@ -13,7 +13,6 @@
   </div>
   <div class="case" data-jour="02" data-mois="10" data-annee="2024">
     <label>
-      <input type='='button' onclick="window.location.href='01àvenir.html';" value="1" >
         <div class='door'>
           <div class='front'>1</div>
           <div class='back'></div>
@@ -33,7 +32,7 @@ cases.forEach(caseElement => {
 
     caseElement.addEventListener('click', () => {
         if (today >= dateCible) {
-            window.location.href = `page${jour}.html`; // Remplace par ton lien
+            window.location.href = `01àvenir.html`; // Remplace par ton lien
         } else {
             alert("Veuillez patienter jusqu'à ce jour !");
             window.location.href = 'page_attente.html';
@@ -43,7 +42,6 @@ cases.forEach(caseElement => {
     </script>
   <div class="case" data-jour="02" data-mois="10" data-annee="2024">
     <label>
-      <input type='button' onclick="window.location.href='patience.html';" value="2" >
         <div class='door'>
           <div class='front'>2</div>
           <div class='back'></div>
@@ -64,10 +62,10 @@ cases.forEach(caseElement => {
 
     caseElement.addEventListener('click', () => {
         if (today >= dateCible) {
-            window.location.href = `page${jour}.html`; // Remplace par ton lien
+            window.location.href = 01àvenir.html`; // Remplace par ton lien
         } else {
             alert("Veuillez patienter jusqu'à ce jour !");
-            window.location.href = 'page_attente.html';
+            window.location.href = 'patience.html';
         }
     });
 });
