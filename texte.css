@@ -46,7 +46,9 @@ text-align: center;
 font-family: 'afterglow', serif;
 font-size: 28px}
 
-
+ul.a {
+  list-style-type: circle;
+}
 
 @media all and (min-width: 1000px){
 
@@ -90,4 +92,3 @@ body {
   font-family: 'afterglow', serif;
   font-size: 28px}
   }
-}
